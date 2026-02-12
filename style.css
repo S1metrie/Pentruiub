@@ -1,0 +1,88 @@
+:root {
+    --pink-primary: #ff4d6d;
+    --bg-gradient: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.photo-frame {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+#main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(214, 51, 132, 0.2);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    color: var(--pink-primary);
+    font-size: 22px;
+    margin-bottom: 20px;
+    min-height: 80px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 150px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#yesBtn {
+    background: var(--pink-primary);
+    color: white;
+    z-index: 11;
+}
+
+#noBtn {
+    background: #adb5bd;
+    color: white;
+    position: absolute;
+    z-index: 9999; /* Ramane mereu deasupra */
+}
+
+.success-msg {
+    display: none;
+    color: #ff0a54;
+    font-size: 28px;
+    font-weight: bold;
+}
